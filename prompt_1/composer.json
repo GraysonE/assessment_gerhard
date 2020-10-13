@@ -1,0 +1,16 @@
+{
+    "name": "gerhard/vehicles",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Grayson Erhard",
+            "email": "web@graysonerhard.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Gerhard\\": "./classes/"
+        }
+    }
+}

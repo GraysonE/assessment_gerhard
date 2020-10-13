@@ -11,22 +11,8 @@ class Boat extends Vehicle
 
     public function __construct()
     {
-
-    }
-
-    public function get()
-    {
-
-    }
-
-    public function set()
-    {
-
-    }
-
-    public function delete()
-    {
-
+        $this->has_fuel = true;
+//        $this->has_keys = false; // Default will set this
     }
 
 }
