@@ -1,5 +1,5 @@
 <template>
-  <div class="button_wrap">
+  <div class="select_wrap">
     <p v-if="loading">loading...</p>
 
     <div>
@@ -9,7 +9,6 @@
         </option>
       </select>
     </div>
-    <span>Selected: {{ themeHelper.theme }}</span>
   </div>
 </template>
 <script>
@@ -36,8 +35,18 @@ export default {
     Promise.all(added).then(sheets => {
       console.log(`${sheets.length} themes loaded`);
       this.loading = false;
-      this.themeHelper.theme = "flatly";
+      this.themeHelper.theme = (window.localStorage.getItem('theme')) ? window.localStorage.getItem('theme') : "flatly";
     });
   }
 }
 </script>
+
+<style>
+  .select_wrap {
+    margin: 15px;
+  }
+
+  select {
+    width: 150px;
+  }
+</style>

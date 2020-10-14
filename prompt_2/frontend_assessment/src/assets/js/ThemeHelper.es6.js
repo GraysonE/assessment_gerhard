@@ -21,6 +21,7 @@ const ThemeHelper = function() {
             throw new Error(`"${name}" has not been defined as a theme.`);
         }
         Object.keys(themes).forEach(n => themes[n].disabled = (n !== name));
+        window.localStorage.setItem('theme', name); // Store in Local Storage
     }
 
     let themes = {};
